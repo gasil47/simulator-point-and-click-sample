@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a689d91966dfb46499fb63f130d9b905, type: 3}
+  m_Script: {fileID: 15024, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Simulator
   m_EditorClassIdentifier: 
   m_Description: 
@@ -20,6 +20,7 @@ MonoBehaviour:
     m_Nodes:
     - Main Editor|0_run
     - Main Editor|0_deploy
+    m_Role: 1
     m_PlayerTag: 
     m_InitialScene: {fileID: 0}
   m_EditorInstances: []
@@ -29,17 +30,27 @@ MonoBehaviour:
     m_Nodes:
     - Simulator - Build
     - Simulator - Run
-    m_BuildProfile: {fileID: 11400000, guid: 9f7b93d1e35fd4b14bca7173332244ba, type: 2}
+    m_BuildProfile: {fileID: 11400000, guid: 426a1baca640bd2428e95df36071895e, type: 2}
+    m_ServerSettings:
+      DeployMode: 0
+      SimulatorSettings:
+        AutoAllocate: 1
+      CliSettings:
+        UseDefaultArguments: 1
+        Port: 7777
+        QueryProtocol: 0
+        QueryPort: 20000
     advancedConfiguration:
       m_StreamLogsToMainEditor: 1
       m_LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
-      m_Arguments: --coherence-simulation-server --coherence-simulator-type world
-        --coherence-region local --coherence-ip 127.0.0.1 --coherence-port 32001
-        --coherence-world-id 123 --coherence-room-id 0 --coherence-unique-room-id
+      m_LocalArguments: --coherence-simulation-server --coherence-simulator-type
+        world --coherence-region local --coherence-ip 127.0.0.1 --coherence-port
+        32001 --coherence-world-id 123 --coherence-room-id 0 --coherence-unique-room-id
         0
+      m_SimulatedArguments: 
+      m_DeviceID: 
+      m_DeviceName: 
   m_RemoteInstances: []
-  m_OverridePort: 0
-  m_Port: 0
   m_MainEditorInstanceObsolete:
     rid: -2
   references:
